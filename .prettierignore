@@ -1,0 +1,11 @@
+dist
+node_modules
+public
+.gitignore
+.husky
+.vscode
+.idea
+*.sh
+*.md
+
+src/assets
