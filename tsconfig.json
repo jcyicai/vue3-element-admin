@@ -1,32 +1,26 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "target": "ESNext", // 指定编译的目标 ECMAScript 版本为 ESNext
+    "useDefineForClassFields": true, // 启用对class字段定义的支持
+    "module": "ESNext", // 指定模块的生成方式为 ESNext
+    "lib": ["ESNext", "DOM", "DOM.Iterable"], // 指定要包含的库文件
     "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "preserve",
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    
+    "moduleResolution": "node", // 指定模块解析策略为 Node.js 的解析方式
+    "allowImportingTsExtensions": true, // 允许导入 TypeScript 扩展名（.ts、.tsx）的模块
+    "allowSyntheticDefaultImports": true, // 允许你在导入时使用默认导入，即使模块没有显式地导出默认导出
+    "resolveJsonModule": true, // 启用解析 JSON 模块的能力
+    "isolatedModules": true, // 启用对每个文件单独编译的模式
+    "noEmit": true, // 不生成任何输出文件
+    "jsx": "preserve", // 指定 JSX 的处理方式为保留
+    "strict": true, // 启用严格的类型检查
     "baseUrl": ".", // 解析非相对模块的基地址，默认是当前目录
-    "paths": { // 路径映射，相对于baseUrl
-    	"@/*": ["src/*"] 
+    "paths": {
+      // 路径映射，相对于baseUrl
+      "@/*": ["src/*"]
     },
-    "types": ["element-plus/global"]
+    "types": ["vite/client", "unplugin-icons/types/vue", "element-plus/global"]
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "src/types/**/*.d.ts"],
   "exclude": ["node_modules", "dist", "**/*.js"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
