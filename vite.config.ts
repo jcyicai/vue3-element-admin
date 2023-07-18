@@ -7,7 +7,6 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers' // 使�
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
-import UnoCSS from 'unocss/vite'
 
 // src 文件路径
 const pathSrc = path.resolve(__dirname, 'src')
@@ -41,7 +40,7 @@ export default defineConfig(({ command, mode }: ConfigEnv): UserConfig => {
       AutoImport({
         imports: ['vue', '@vueuse/core'],
         eslintrc: {
-          enabled: false, // 是否自动生成 eslint 规则，建议生成之后设置 false
+          enabled: true, // 是否自动生成 eslint 规则，建议生成之后设置 false
           filepath: './.eslintrc-auto-import.json', // 指定自动导入函数 eslint 规则的文件
           globalsPropValue: true
         },
@@ -67,8 +66,7 @@ export default defineConfig(({ command, mode }: ConfigEnv): UserConfig => {
         iconDirs: [path.resolve(process.cwd(), 'src/assets/icons')],
         // 指定symbolId格式
         symbolId: 'icon-[dir]-[name]'
-      }),
-      UnoCSS({})
+      })
     ],
     css: {
       // CSS 预处理器
