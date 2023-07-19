@@ -279,6 +279,7 @@
     "watchTriggerable": true,
     "watchWithFilter": true,
     "whenever": true,
-    "ElForm": true
+    "ElForm": true,
+    "ElTree": true
   }
 }

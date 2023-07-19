@@ -13,9 +13,9 @@ import 'virtual:svg-icons-register'
 import i18n from '@/lang/index'
 
 // 样式
-import 'normalize.css'
 import 'element-plus/theme-chalk/dark/css-vars.css'
 import '@/styles/index.scss'
+import 'uno.css'
 
 const app = createApp(App)
 // 全局注册 自定义指令(directive)

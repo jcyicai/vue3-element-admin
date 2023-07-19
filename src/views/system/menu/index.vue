@@ -11,7 +11,7 @@ import { listMenus, getMenuForm, listMenuOptions, addMenu, deleteMenu, updateMen
 import { MenuTypeEnum } from '@/enums/MenuTypeEnum'
 
 import SvgIcon from '@/components/SvgIcon/index.vue'
-import IconSelect from '@/components/IconSelect/index.vue'
+//import IconSelect from '@/components/IconSelect/index.vue'
 
 const queryFormRef = ref(ElForm)
 const menuFormRef = ref(ElForm)
